@@ -1,0 +1,35 @@
+# Ignore các file Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore môi trường ảo (venv, virtualenv, pipenv)
+venv/
+env/
+envs/
+.env
+.venv/
+Pipfile.lock
+poetry.lock
+
+# Ignore file cấu hình IDE (VSCode, PyCharm)
+.vscode/
+.idea/
+
+# Ignore file log, cache
+logs/
+*.log
+*.sqlite3
+*.db
+*.bak
+
+# Ignore file môi trường (biến môi trường)
+.env
+.env.local
+*.secrets
+
+# Ignore file tạm thời
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

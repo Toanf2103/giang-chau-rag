@@ -1,0 +1,7 @@
+langchain
+openai
+qdrant-client 
+tiktoken 
+sentence-transformers 
+python-dotenv
+langchain-community

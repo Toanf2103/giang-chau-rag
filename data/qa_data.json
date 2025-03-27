@@ -1,0 +1,128 @@
+[
+  {
+    "question": "Chính sách nghỉ lễ Tết",
+    "answer": "Nghỉ đầy đủ các ngày lễ theo quy định nhà nước\r\nTết Nguyên đán: nghỉ 7-10 ngày\r\nThưởng lễ Tết theo thâm niên làm việc",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Chính sách làm thêm giờ",
+    "answer": "OT được tính 150% lương cơ bản vào ngày thường\\nOT được tính 200% vào ngày nghỉ/lễ\\nĐăng ký OT trước 1 ngày",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["Nhân viên, giám đốc"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Chính sách làm thêm giờ",
+    "answer": "OT được tính 200% lương cơ bản vào ngày thường\\nOT được tính 300% vào ngày nghỉ/lễ\\nĐăng ký OT trước 3 ngày",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["Thư ký"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Chế độ ăn ca",
+    "answer": "Công ty hỗ trợ 30,000đ/ca làm việc\\nCó căn tin tại công ty\\nĐặt suất ăn trước 9h sáng hàng ngày",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["Nhân viên, giám đốc"] },
+      { "department": ["Hành chính, Kế toán"] }
+    ]
+  },
+  {
+    "question": "Chế độ ăn ca",
+    "answer": "Công ty hỗ trợ 300,000đ/ca làm việc\\nCó căn tin tại công ty\\nĐặt suất ăn trước 9h sáng hàng ngày",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["Trợ lí"] },
+      { "department": ["Bàn tơ"] }
+    ]
+  },
+  {
+    "question": "Quy trình xét tăng lương",
+    "answer": "Đánh giá KPI hàng quý\\nXét tăng lương 6 tháng/lần\\nMức tăng dựa trên hiệu suất và đóng góp",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["Hành chính, Kế toán"] }
+    ]
+  },
+  {
+    "question": "Quy định trang phục",
+    "answer": "Thứ 2-5: Đồng phục công ty\\nThứ 6: Trang phục lịch sự\\nKhông mặc quần short, dép lê trong giờ làm",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Chính sách đào tạo",
+    "answer": "Đào tạo nội bộ: 2 tuần đầu vào\\nĐào tạo chuyên môn: 3 tháng/lần\\nHỗ trợ chi phí học tập nâng cao trình độ",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Chính sách lương thưởng",
+    "answer": "Lương cơ bản + phụ cấp + thưởng hiệu suất\r\nTăng lương định kỳ 6 tháng/lần\r\nThưởng dự án theo kết quả hoàn thành",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Quy định nghỉ phép năm",
+    "answer": "Mỗi nhân viên được 12 ngày phép năm\\nNghỉ phép cần báo trước 3 ngày\\nPhép năm không sử dụng được thanh toán vào cuối năm",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Tên công ty của chúng ta là gì?",
+    "answer": "Công ty TNHH Eranin",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Lương tháng này được nhận khi nào?",
+    "answer": "Lương được chuyển vào ngày 10 hàng tháng qua  tài khoản ngân hàng.",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Chế độ bảo hiểm ra sao?",
+    "answer": "Công ty đóng đầy đủ BHXH, BHYT, BHTN theo quy định. \r\nRiêng BHTN công ty hỗ trợ thêm 50% phí.",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  },
+  {
+    "question": "Giờ làm việc thế nào?",
+    "answer": "Ca sáng: 6h-14h\\nCa chiều: 14h-22h\\nCa đêm: 22h-6h",
+    "category": "chính sách",
+    "scope":[
+      { "position": ["*"] },
+      { "department": ["*"] }
+    ]
+  }
+]
