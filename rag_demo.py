@@ -19,47 +19,27 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 app = FastAPI(title="HR Policy QA System")
 
 # Định nghĩa model cho request
-class QAData(BaseModel):
-    question: str
-    answer: str
-    category: str
-    scope: List[Dict[str, List[str]]]
+class Policy(BaseModel):
+    title: str
+    content: str
 
 class QARequest(BaseModel):
-    data: List[QAData]
+    data: List[Policy]
     query: str
 
 # Khởi tạo các biến global
 qa_chain = None
 embedding = None
 
-def initialize_qa_system(qa_data: List[Dict[str, Any]]):
+def initialize_qa_system(policies: List[Dict[str, str]]):
     global qa_chain, embedding
     
     # Định dạng lại dữ liệu
     formatted_docs = []
-    for item in qa_data:
-        # Xử lý scope
-        position_scope = item['scope'][0]['position'][0]
-        department_scope = item['scope'][1]['department'][0]
-        
-        # Tạo mô tả về phạm vi áp dụng
-        scope_desc = f"Áp dụng cho: "
-        if position_scope == "*":
-            scope_desc += "Tất cả chức vụ"
-        else:
-            scope_desc += f"Chức vụ: {', '.join(item['scope'][0]['position'])}"
-        
-        if department_scope == "*":
-            scope_desc += ", Tất cả phòng ban"
-        else:
-            scope_desc += f", Phòng ban: {', '.join(item['scope'][1]['department'])}"
-        
-        # Tạo văn bản đầy đủ
+    for policy in policies:
         doc = f"""
-Câu hỏi: {item['question']}
-Trả lời: {item['answer']}
-{scope_desc}
+Chính sách: {policy['title']}
+Nội dung: {policy['content']}
 """
         formatted_docs.append(doc)
 
@@ -90,8 +70,11 @@ Trả lời: {item['answer']}
 @app.post("/ask")
 async def ask_question(request: QARequest):
     try:
+        # Chuyển đổi Pydantic model thành dict
+        policies_data = [{"title": policy.title, "content": policy.content} for policy in request.data]
+        
         # Khởi tạo hệ thống với dữ liệu mới
-        initialize_qa_system([item.dict() for item in request.data])
+        initialize_qa_system(policies_data)
         
         # Thực hiện truy vấn
         result = qa_chain(request.query)
@@ -102,6 +85,7 @@ async def ask_question(request: QARequest):
             "source_documents": [doc.page_content for doc in result['source_documents']]
         }
     except Exception as e:
+        print(f"Error details: {str(e)}")  # Thêm log để debug
         raise HTTPException(status_code=500, detail=str(e))
 
 if __name__ == "__main__":
