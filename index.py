@@ -20,6 +20,7 @@ app = FastAPI(title="HR Policy QA System")
 
 # Định nghĩa model cho request
 class Policy(BaseModel):
+    id: str
     title: str
     content: str
 
@@ -39,6 +40,7 @@ async def ask_question(request: QARequest):
             doc = f"""
 Chính sách: {policy.title}
 Nội dung: {policy.content}
+ID: {policy.id}
 """
             formatted_docs.append(doc)
 

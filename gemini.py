@@ -20,6 +20,7 @@ app = FastAPI(title="HR Policy QA System with Gemini")
 class Policy(BaseModel):
     title: str
     content: str
+    id: str
 
 class QARequest(BaseModel):
     data: List[Policy]
@@ -45,7 +46,11 @@ async def ask_question(request: QARequest):
         
         # Tạo context từ tất cả policies
         context = "\n\n".join([
-            f"Chính sách: {policy['title']}\nNội dung: {policy['content']}"
+             f"""
+Chính sách: {policy.title}
+Nội dung: {policy.content}
+ID: {policy.id}
+"""
             for policy in policies_data
         ])
         
